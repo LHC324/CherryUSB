@@ -128,6 +128,10 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../version.html">版本说明</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">性能展示</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../show/index.html">性能展示</a></li>
+</ul>
 <p class="caption" role="heading"><span class="caption-text">商业支持</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../support/index.html">商业支持</a></li>
@@ -309,6 +313,10 @@
 <figure class="align-default">
 <img alt="../_images/stm32_init2.png" src="../_images/stm32_init2.png" />
 </figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>下面步骤从 V1.4.4 开始不再需要，<strong>fsdev/usb_glue_st.c</strong>, <strong>dwc2/usb_glue_st.c</strong> 文件中已经实现</p>
+</div>
 <ul class="simple">
 <li><p>将 <cite>stm32xxxx_hal_msp.c</cite> 中的 <cite>HAL_PCD_MspInit</cite> 或者是 <cite>HAL_HCD_MspInit</cite> 中的内容复制到 <cite>usb_dc_low_level_init</cite> 和 <cite>usb_hc_low_level_init</cite> 函数中，举例如下：</p></li>
 </ul>
