@@ -6,14 +6,14 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>设备协议栈 &mdash; CherryUSB 1.5.0 documentation</title>
+  <title>设备协议栈 &mdash; CherryUSB 1.5.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
 
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=e0a75244"></script>
+      <script src="../_static/documentation_options.js?v=44dfd65d"></script>
       <script src="../_static/doctools.js?v=9a2dae69"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
@@ -147,6 +147,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../demo/usbd_video.html">usbd_video</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo/usbd_winusb.html">usbd_winusb</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo/usbd_webusb.html">usbd_webusb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo/usbd_adb.html">usbd_adb</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo/usbh_serial.html">usbh_serial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo/usbh_hid.html">usbh_hid</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo/usbh_msc.html">usbh_msc</a></li>
@@ -221,6 +222,10 @@
 <li><p>有多少个接口就调用多少次 <cite>usbd_add_interface</cite>，参数填相关 <cite>xxx_init_intf</cite>, 如果没有支持的，手动创建一个 intf 填入</p></li>
 <li><p>有多少个端点就调用多少次 <cite>usbd_add_endpoint</cite>，当中断完成时，会调用到注册的端点回调中。</p></li>
 </ul>
+<p>参考下面这张图：</p>
+<figure class="align-default">
+<img alt="../_images/api_device1.png" src="../_images/api_device1.png" />
+</figure>
 <section id="core">
 <h2>CORE<a class="headerlink" href="#core" title="Link to this heading"></a></h2>
 <div class="admonition note">
